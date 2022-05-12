@@ -1,0 +1,69 @@
+.encyclopedia {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+
+  &__col {
+    flex: 1;
+  }
+
+  &__title {
+    &--h1,
+    &--h2 {
+      font-weight: 700;
+    }
+  }
+
+  &__terms {
+    padding-left: 1em;
+  }
+
+  &__term {
+    display: block;
+    margin-bottom: 0.5em;
+    color: inherit;
+    transition: all 0.3s ease-out;
+    
+    &--active,
+    &:hover,
+    &:focus {
+      color: #AA9171;
+    }
+    
+    &--active {
+      font-weight: bold;
+    }
+  }
+
+  &__icon {
+    margin-right: 6px;
+    font-size: 0.8em;
+  }
+
+  &__definition {
+    display: none;
+  }
+
+  &__definition--0 {
+    display: block;
+  }
+
+  &__definition--0 &__title {
+    text-align: center;
+  }
+
+  &__image {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  
+  @media screen and (max-width: 767px) {
+    & {
+      flex-direction: column;
+
+      &__term {
+        margin-bottom: 0.25em;
+      }
+    }
+  }
+}

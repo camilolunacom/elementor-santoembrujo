@@ -1,0 +1,24 @@
+*::-webkit-media-controls-panel {
+  background-color: #316866;
+}
+
+body:not(.e-preview--show-hidden-elements) {
+  .elementor-widget-audio_player {
+    position: fixed;
+    bottom: 2em;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 3;
+
+    .player {
+      display: none;
+    }
+  }
+}
+
+.player {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  width: 500px;
+}
